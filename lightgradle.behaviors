@@ -1,0 +1,2 @@
+{:+ {:app [(:lt.objs.plugins/load-js "lightgradle_compiled.js")]
+     :lightgradle []}}

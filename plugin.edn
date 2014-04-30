@@ -1,0 +1,6 @@
+{:name "lightgradle"
+ :version "0.0.1"
+ :author "Magnus Rundberget"
+ :source "https://github.com/rundis/lightgradle"
+ :desc "Plugin for interacting with gradle projects"
+ :behaviors "lightgradle.behaviors"}
