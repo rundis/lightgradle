@@ -1,0 +1,33 @@
+apply plugin: 'groovy'
+
+archivesBaseName = "ltgradle"
+
+
+repositories {
+    jcenter()
+    maven {
+        url 'http://repo.gradle.org/gradle/libs-releases-local'
+    }
+}
+
+dependencies {
+    compile 'org.codehaus.groovy:groovy-all:2.2.2', "org.gradle:gradle-tooling-api:1.12"
+    testCompile 'org.spockframework:spock-core:0.7-groovy-2.0'
+
+    // Need an SLF4J implementation at runtime
+    runtime 'org.slf4j:slf4j-simple:1.7.5'
+
+}
+
+sourceSets {
+    main {
+        groovy {
+            srcDirs = ["groovy-src/main"]
+        }
+    }
+    test {
+        groovy {
+            srcDirs = ["groovy-src/test"]
+        }
+    }
+}
